@@ -63,3 +63,16 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 100ms (Views: 91.5ms | ActiveRecord: 0.0ms | Allocations: 30191)
 
 
+Started GET "/" for 127.0.0.1 at 2023-12-14 12:09:04 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 145)
+  Rendered layout layouts/application.html.erb (Duration: 50.1ms | Allocations: 4443)
+Completed 200 OK in 57ms (Views: 52.1ms | ActiveRecord: 0.0ms | Allocations: 5345)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2023-12-14 12:09:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/tasks/new"):
+  
