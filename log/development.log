@@ -487,3 +487,497 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 1451)
 
 
+Started GET "/home/addTask" for 127.0.0.1 at 2023-12-14 13:12:40 +0100
+Started GET "/home/addTask" for 127.0.0.1 at 2023-12-14 13:12:43 +0100
+Processing by HomeController#addTask as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/addTask.html.erb within layouts/application
+  Rendered home/addTask.html.erb within layouts/application (Duration: 0.3ms | Allocations: 121)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 117)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1774)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 2669)
+
+
+Started GET "/home/addTask" for 127.0.0.1 at 2023-12-14 13:12:44 +0100
+Started GET "/home/addTask" for 127.0.0.1 at 2023-12-14 13:12:44 +0100
+Processing by HomeController#addTask as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/addTask.html.erb within layouts/application
+  Rendered home/addTask.html.erb within layouts/application (Duration: 0.3ms | Allocations: 137)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 1965)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 2920)
+
+
+Processing by HomeController#addTask as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/addTask.html.erb within layouts/application
+  Rendered home/addTask.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+Processing by HomeController#addTask as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/addTask.html.erb within layouts/application
+  Rendered home/addTask.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2378)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 2820)
+
+
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2369)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 2619)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:12:47 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 92)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1283)
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 1589)
+
+
+Started GET "/home/addTask" for 127.0.0.1 at 2023-12-14 13:12:48 +0100
+Processing by HomeController#addTask as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/addTask.html.erb within layouts/application
+  Rendered home/addTask.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1207)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 1454)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:12:49 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1204)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 1451)
+
+
+Started GET "/home/addTask" for 127.0.0.1 at 2023-12-14 13:12:50 +0100
+Processing by HomeController#addTask as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/addTask.html.erb within layouts/application
+  Rendered home/addTask.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1207)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 1454)
+
+
+Started GET "/home/addTask" for 127.0.0.1 at 2023-12-14 13:16:20 +0100
+Processing by HomeController#addTask as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/addTask.html.erb within layouts/application
+  Rendered home/addTask.html.erb within layouts/application (Duration: 0.3ms | Allocations: 123)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 1762)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 2657)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:16:22 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 196)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1385)
+Completed 200 OK in 10ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 1691)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:18:24 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1239)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 1486)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:18:26 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1248)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1495)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:18:26 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 1227)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.0ms | Allocations: 1474)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:18:45 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 181)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1827)
+Completed 200 OK in 11ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 2721)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:18:46 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1233)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 1480)
+
+
+Started GET "/home/addTask" for 127.0.0.1 at 2023-12-14 13:19:03 +0100
+Processing by HomeController#addTask as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/addTask.html.erb within layouts/application
+  Rendered home/addTask.html.erb within layouts/application (Duration: 0.3ms | Allocations: 115)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1302)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1609)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:19:29 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 187)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1812)
+Completed 200 OK in 13ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 2706)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:19:30 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 42)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1237)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 1484)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:22:36 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 187)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1830)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 2724)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:22:55 +0100
+  
+SyntaxError (I:/TaskList/app/controllers/home_controller.rb:4: syntax error, unexpected constant, expecting `end' or dummy end
+    <% link_to "Ajouter une tâche", home_addTask_pa...
+                ^~~~~~~
+):
+  
+app/controllers/home_controller.rb:4: syntax error, unexpected constant, expecting `end' or dummy end
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:23:09 +0100
+  
+SyntaxError (I:/TaskList/app/controllers/home_controller.rb:4: syntax error, unexpected constant, expecting `end' or dummy end
+    <% link_to "Ajouter une tâche", home_addTask_pa...
+                ^~~~~~~
+):
+  
+app/controllers/home_controller.rb:4: syntax error, unexpected constant, expecting `end' or dummy end
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:23:31 +0100
+  
+SyntaxError (I:/TaskList/app/controllers/home_controller.rb:4: syntax error, unexpected constant, expecting `end' or dummy end
+      <% link_to "Ajouter une tâche", home_addTask_pa...
+                  ^~~~~~~
+):
+  
+app/controllers/home_controller.rb:4: syntax error, unexpected constant, expecting `end' or dummy end
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:23:32 +0100
+  
+SyntaxError (I:/TaskList/app/controllers/home_controller.rb:4: syntax error, unexpected constant, expecting `end' or dummy end
+      <% link_to "Ajouter une tâche", home_addTask_pa...
+                  ^~~~~~~
+):
+  
+app/controllers/home_controller.rb:4: syntax error, unexpected constant, expecting `end' or dummy end
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:23:33 +0100
+  
+SyntaxError (I:/TaskList/app/controllers/home_controller.rb:4: syntax error, unexpected constant, expecting `end' or dummy end
+      <% link_to "Ajouter une tâche", home_addTask_pa...
+                  ^~~~~~~
+):
+  
+app/controllers/home_controller.rb:4: syntax error, unexpected constant, expecting `end' or dummy end
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:25:07 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 95)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 117)
+  Rendered layout layouts/application.html.erb (Duration: 288.5ms | Allocations: 1727)
+Completed 200 OK in 292ms (Views: 290.6ms | ActiveRecord: 0.0ms | Allocations: 2621)
+
+
+Started GET "/home/addTask" for 127.0.0.1 at 2023-12-14 13:25:08 +0100
+Processing by HomeController#addTask as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/addTask.html.erb within layouts/application
+  Rendered home/addTask.html.erb within layouts/application (Duration: 0.3ms | Allocations: 115)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1332)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1639)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:25:09 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1201)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 1448)
+
+
+Started GET "/home/addTask" for 127.0.0.1 at 2023-12-14 13:25:10 +0100
+Processing by HomeController#addTask as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/addTask.html.erb within layouts/application
+  Rendered home/addTask.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 1201)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 1448)
+
+
+Started GET "/home/addTask" for 127.0.0.1 at 2023-12-14 13:25:23 +0100
+Processing by HomeController#addTask as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/addTask.html.erb within layouts/application
+  Rendered home/addTask.html.erb within layouts/application (Duration: 0.3ms | Allocations: 125)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 1764)
+Completed 200 OK in 13ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 2659)
+
+
+Started GET "/home/addTask" for 127.0.0.1 at 2023-12-14 13:25:30 +0100
+Processing by HomeController#addTask as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/addTask.html.erb within layouts/application
+  Rendered home/addTask.html.erb within layouts/application (Duration: 0.2ms | Allocations: 126)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1789)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 2684)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:25:33 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 91)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1302)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 1608)
+
+
+Started GET "/home/addTask" for 127.0.0.1 at 2023-12-14 13:25:33 +0100
+Processing by HomeController#addTask as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/addTask.html.erb within layouts/application
+  Rendered home/addTask.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1210)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 1457)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:25:38 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1207)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 1454)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:28:01 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 107)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 1743)
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 2637)
+
+
+Started GET "/home/addTask" for 127.0.0.1 at 2023-12-14 13:28:02 +0100
+Processing by HomeController#addTask as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/addTask.html.erb within layouts/application
+  Rendered home/addTask.html.erb within layouts/application (Duration: 0.3ms | Allocations: 117)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1313)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1620)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:28:03 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1213)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1460)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:28:16 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 105)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1744)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 2638)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:28:25 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 108)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1756)
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 2650)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:28:32 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 108)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1759)
+Completed 200 OK in 11ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 2653)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:29:31 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 106)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1751)
+Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 2645)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:29:40 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 107)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1749)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 2643)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:29:45 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 107)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1743)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 2637)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:35:15 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 117)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1777)
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 2673)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:35:23 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1207)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 1454)
+
+
+Started GET "/home/deleteTask/1" for 127.0.0.1 at 2023-12-14 13:35:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/deleteTask/1"):
+  
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:35:49 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 117)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1762)
+Completed 200 OK in 11ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 2657)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:35:51 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1198)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 1445)
+
+
+Started GET "/home/addTask" for 127.0.0.1 at 2023-12-14 13:35:54 +0100
+Processing by HomeController#addTask as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/addTask.html.erb within layouts/application
+  Rendered home/addTask.html.erb within layouts/application (Duration: 0.4ms | Allocations: 117)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1313)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 1620)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:35:55 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1225)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 1472)
+
+
+Started GET "/home/addTask" for 127.0.0.1 at 2023-12-14 13:35:59 +0100
+Processing by HomeController#addTask as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/addTask.html.erb within layouts/application
+  Rendered home/addTask.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1198)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 1445)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-14 13:36:00 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1210)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 1457)
+
+
