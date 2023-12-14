@@ -1,24 +1,28 @@
 <h1>Ajouter une tâche</h1>
-<form>
-    <label for="title">
-        Titre de la tache
+<form action="/home" method="post">
+    <input hidden id="id" name="id" value="" locked>
     <br>
-    <input type="text" id="title" name="title">
+    <label for="title">
+        Titre de la tâche
+    </label>
+    <br>
+    <input type="text" id="title" name="title" required>
     <br>
     <label for="description">
-        Description de la tache
+        Description de la tâche
+    </label>
     <br>
-    <input type="text" id="description" name="description">
+    <textarea id="description" name="description" required></textarea>
     <br>
     <label for="deadline">
-        Date limite
+        date limite
+    </label>
     <br>
-    <input type="date" id="deadline" name="deadline">
+    <input  type="date" id="date" name="date" required>
+    <input hidden type="checkbox" id="iscompleted" name="iscompleted" value="iscompleted">
     <br>
     <input type="submit" value="Submit">
-    <br>
-    <br>
+</form>
 <a href="/">
     Retour à l'accueil
-
-</form>
+</a>
