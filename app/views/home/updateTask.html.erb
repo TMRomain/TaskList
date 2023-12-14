@@ -1,0 +1,28 @@
+<h1>Modifier une tâche</h1>
+<form action="/home" method="post">
+    <input hidden id="id" name="id" value="<%= @task.id %>" locked>
+    <br>
+    <label for="title">
+        Titre de la tâche
+    </label>
+    <br>
+    <input type="text" id="title" name="title" value="<%= @task.title %>" required>
+    <br>
+    <label for="description">
+        Description de la tâche
+    </label>
+    <br>
+    <textarea id="description" name="description" required> <%= @task.desc %> </textarea>
+    <br>
+    <label for="deadline">
+        date limite
+    </label>
+    <br>
+    <input  type="date" id="date" name="date" value="<%= @task.date %>" required>
+    <input hidden type="checkbox" id="iscompleted" name="iscompleted" value="iscompleted">
+    <br>
+    <input type="submit" value="Submit">
+</form>
+<a href="/">
+    Retour à l'accueil
+</a>

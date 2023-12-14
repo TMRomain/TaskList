@@ -8,6 +8,14 @@ class HomeController < ApplicationController
   end
 
   def create
+    #check if params[:id is not null]
+    #if not null, update the task
+    #else create a new task
+    if params[:id] != ""
+      updateTask
+      return
+    end
+
     task_title = params[:title]
     task_description = params[:description]
     task_date = params[:date]
@@ -21,14 +29,25 @@ class HomeController < ApplicationController
     redirect_to '/'
   end
 
+  def updateTask
+    task = Task.find(params[:id])
+    task.title = params[:title]
+    task.desc = params[:description]
+    task.date = params[:date]
+    task.iscompleted = params[:iscompleted]
+    task.save
+    redirect_to '/'
+  end
+
   def delete
     task = Task.find(params[:id])
     task.destroy
     redirect_to '/'
   end
 
-  def update
+  def redirectToUpdate
     @task = Task.find(params[:id])
+    # cosole.log(@task)
     # load view updateTask.html.erb
     render template: "home/updateTask"
   end
