@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :home, only: [:create]
   # get 'home/index'
   get 'home/addTask'
   root 'home#index'
