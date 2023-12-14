@@ -8,8 +8,10 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
-
+  <title>TaskMaster</title>
   <body>
+    <h1>TaskMaster</h1>
+    <p>La date actuelle est <strong><%= Time.now %></strong>.</p>
     <%= yield %>
   </body>
 </html>
