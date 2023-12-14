@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   resources :home, only: [:create, :delete]
   delete 'home/delete/:id', to: 'home#delete', as: 'delete_task'
+  patch 'home/update/:id', to: 'home#update', as: 'update_task'
 
   # get 'home/index'
   get 'home/addTask'
+  get 'home/updateTask'
   root 'home#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

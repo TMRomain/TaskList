@@ -14,10 +14,11 @@
     <li>
         <div class="task">
             <h3 class="task-title"><%= task.title %></h3>
+            <p class="task-date"><%= task.date %></p>
             <p class="task-description"><%= task.desc %></p>
             <div class="task-actions">
-                <a href="#">Modifier</a>
-                <%= button_to "Destroy this task", { controller: "home", action: "delete", id: task.id }, method: :delete %>
+                <%= button_to "Modifier la tache", update_task_path(task), method: :patch %>
+                <%= button_to "Supprimer la tache", { controller: "home", action: "delete", id: task.id }, method: :delete %>
                 <input type="checkbox" name="completed" value="completed" <%= task.iscompleted ? "checked" : "" %>>
             </div>
         </li>

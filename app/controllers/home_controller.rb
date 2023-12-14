@@ -27,4 +27,9 @@ class HomeController < ApplicationController
     redirect_to '/'
   end
 
+  def update
+    @task = Task.find(params[:id])
+    # load view updateTask.html.erb
+    render template: "home/updateTask"
+  end
 end
