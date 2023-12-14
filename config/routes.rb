@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :home, only: [:create]
+  resources :home, only: [:create, :delete]
+  delete 'home/delete/:id', to: 'home#delete', as: 'delete_task'
+
   # get 'home/index'
   get 'home/addTask'
   root 'home#index'

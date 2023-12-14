@@ -17,7 +17,7 @@
             <p class="task-description"><%= task.desc %></p>
             <div class="task-actions">
                 <a href="#">Modifier</a>
-                <a href="#">Supprimer</a>
+                <%= button_to "Destroy this task", { controller: "home", action: "delete", id: task.id }, method: :delete %>
                 <input type="checkbox" name="completed" value="completed" <%= task.iscompleted ? "checked" : "" %>>
             </div>
         </li>

@@ -4,6 +4,7 @@ class HomeController < ApplicationController
     @tasks = Task.all
   end
   def addTask
+
   end
 
   def create
@@ -18,6 +19,12 @@ class HomeController < ApplicationController
 
     # Redirect to the index page after successful creation
     redirect_to '/'
-
   end
+
+  def delete
+    task = Task.find(params[:id])
+    task.destroy
+    redirect_to '/'
+  end
+
 end
