@@ -3,11 +3,27 @@
         Ajouter une tâche
     </a>
 <p>
-    Trier par statut :
-    <input type="radio" name="status" value="all" checked> Toutes les tâches
-    <input type="radio" name="status" value="day"> Tâches du jours
-    <input type="radio" name="status" value="future"> Tâches à venir
-    <input type="radio" name="status" value="completed"> Tâches terminées
+    Trier par :
+    <input type="radio" name="status" value="monthly" checked> Mois
+    <input type="radio" name="status" value="finished"> Terminer
+    <input type="radio" name="status" value="toCome"> A venir
+    <input type="radio" name="status" value="all"> Toute
+    
+    <div class="monthSelection">
+        <%= form_tag({ controller: "home", action: "previousMonth" }, method: :patch) do %>
+            <%= button_tag type: "submit", class: "arrowLeft", onclick: "previousMonth(); return false;" do %>
+                <%= image_tag("arrowLeft.png", alt: "Flèche gauche") %>
+            <% end %>
+        <% end %>
+        
+        <%= I18n.t('month_names')[@current_selected_month] %>
+        
+        <%= form_tag({ controller: "home", action: "nextMonth" }, method: :patch) do %>
+            <%= button_tag type: "submit", class: "arrowRight", onclick: "nextMonth(); return false;" do %>
+                <%= image_tag("arrowRight.png", alt: "Flèche droite") %>
+            <% end %>
+        <% end %>
+  </div>
 
 <div class="tasks">
 <% @tasks.each do |task| %>

@@ -1,10 +1,31 @@
 class HomeController < ApplicationController  
   protect_from_forgery with: :null_session
+  @@monthIndex = (Time.now).month
+  @@currentSelection = "(Time.now).month"
   def index
-    @tasks = Task.all
+    @current_selected_month = @@monthIndex
+    @tasks = Task.select { |task| task.date.month == @current_selected_month }
+    logger.debug(@current_selected_month)
   end
   def addTask
 
+  end
+  def currentSelection
+
+  def nextMonth
+    @@monthIndex = @@monthIndex + 1
+    if @@monthIndex > 12
+      @@monthIndex = 1
+    end
+    redirect_to '/'
+  end
+
+  def previousMonth
+    @@monthIndex = @@monthIndex - 1
+    if @@monthIndex < 1
+      @@monthIndex = 12
+    end
+    redirect_to '/'
   end
 
   def create

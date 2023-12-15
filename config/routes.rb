@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   delete 'home/delete/:id', to: 'home#delete', as: 'delete_task'
   post 'home/changeState/:id', to: 'home#changeState', as: 'changeState_task'
   patch 'home/redirectToUpdate/:id', to: 'home#redirectToUpdate', as: 'update_task'
-
+  patch 'home/nextMonth', to: 'home#nextMonth'
+  patch 'home/previousMonth', to: 'home#previousMonth', as: 'previousMonth'
+  
   # get 'home/index'
   get 'home/addTask'
   get 'home/updateTask'
