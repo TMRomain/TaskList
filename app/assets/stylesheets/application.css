@@ -52,4 +52,33 @@ body{
     list-style: none;
 }
 
-
+.arrowLeft, .arrowRight {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
+  p {
+    display: flex;
+    line-height: 2;
+  }
+  
+  p img {
+    vertical-align: middle;
+  }
+  .arrowLeft img, .arrowRight img {
+    width: 50px;
+    height: auto;
+  }
+  .monthSelection {
+    display: flex;
+    align-items: center;
+    
+  }
+/* reset   .monthSelection.form style */
+.monthSelection form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
