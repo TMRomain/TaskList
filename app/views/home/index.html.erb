@@ -4,11 +4,12 @@
     </a>
 <p>
     Trier par :
-    <input type="radio" name="status" value="monthly" checked> Mois
-    <input type="radio" name="status" value="finished"> Terminer
-    <input type="radio" name="status" value="toCome"> A venir
-    <input type="radio" name="status" value="all"> Toute
-    
+    <div class="monthSelection">
+        <%= button_to "Mois", update_selection_path(selection: "monthly"), method: :post %>
+        <%= button_to "Terminer", update_selection_path(selection: "finished"), method: :post %>
+        <%= button_to "A venir", update_selection_path(selection: "toCome"), method: :post %>
+        <%= button_to "Toute", update_selection_path(selection: "all"), method: :post %>
+    </div>
     <div class="monthSelection">
         <%= form_tag({ controller: "home", action: "previousMonth" }, method: :patch) do %>
             <%= button_tag type: "submit", class: "arrowLeft", onclick: "previousMonth(); return false;" do %>
