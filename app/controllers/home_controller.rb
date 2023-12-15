@@ -45,10 +45,28 @@ class HomeController < ApplicationController
     redirect_to '/'
   end
 
+  def changeState
+    @task = Task.find(params[:id])
+    @task.iscompleted = !@task.iscompleted
+    @task.save
+    # update the page 
+    redirect_to '/'
+  end
+
   def redirectToUpdate
     @task = Task.find(params[:id])
-    # cosole.log(@task)
     # load view updateTask.html.erb
     render template: "home/updateTask"
+  end
+
+  def update
+    @task = Task.find(params[:id])
+    @task.completed = params[:completed]
+    if @task.save
+      flash[:success] = "Task updated successfully"
+      redirect_to tasks_path
+    else
+      render :edit
+    end
   end
 end

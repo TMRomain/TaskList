@@ -9,7 +9,7 @@
     <input type="radio" name="status" value="future"> Tâches à venir
     <input type="radio" name="status" value="completed"> Tâches terminées
 
-
+<div class="tasks">
 <% @tasks.each do |task| %>
     <li>
         <div class="task">
@@ -19,7 +19,12 @@
             <div class="task-actions">
                 <%= button_to "Modifier la tache", update_task_path(task), method: :patch %>
                 <%= button_to "Supprimer la tache", { controller: "home", action: "delete", id: task.id }, method: :delete %>
-                <input type="checkbox" name="completed" value="completed" <%= task.iscompleted ? "checked" : "" %>>
+                <% if task.iscompleted %>
+                    <%= button_to "Marquer comme non terminée", { controller: "home", action: "changeState", id: task.id }, method: :changeState, disabled: true %>
+                <% else %>
+                    <%= button_to "Marquer comme terminée", { controller: "home", action: "changeState", id: task.id }, method: :changeState %>
+                <% end %>
             </div>
         </li>
 <% end %>
+</div>

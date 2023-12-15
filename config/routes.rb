@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  resources :home, only: [:create, :delete]
+  resources :home, only: [:create]
   delete 'home/delete/:id', to: 'home#delete', as: 'delete_task'
-  patch 'home/update/:id', to: 'home#update', as: 'update_task'
+  post 'home/changeState/:id', to: 'home#changeState', as: 'changeState_task'
+  patch 'home/redirectToUpdate/:id', to: 'home#redirectToUpdate', as: 'update_task'
 
   # get 'home/index'
   get 'home/addTask'
