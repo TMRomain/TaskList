@@ -29,19 +29,26 @@
 <div class="tasks">
 <% @tasks.each do |task| %>
     <li>
-        <div class="task">
-            <h3 class="task-title"><%= task.title %></h3>
-            <p class="task-date"><%= task.date %></p>
-            <p class="task-description"><%= task.desc %></p>
-            <div class="task-actions">
-                <%= button_to "Modifier la tache", update_task_path(task), method: :patch %>
-                <%= button_to "Supprimer la tache", { controller: "home", action: "delete", id: task.id }, method: :delete %>
-                <% if task.iscompleted %>
-                    <%= button_to "Marquer comme non terminée", { controller: "home", action: "changeState", id: task.id }, method: :changeState, disabled: true %>
-                <% else %>
-                    <%= button_to "Marquer comme terminée", { controller: "home", action: "changeState", id: task.id }, method: :changeState %>
+        <div class="cardContent">
+            <%= form_tag(update_task_path(id: task.id), method: :post) do %>
+                <%= button_tag type: "submit", class: "updateButton", onclick: "redirectToUpdate(); return false;" do %>
+                    <p class="task-date"><%= task.date.strftime("%d") %></p>
+                    <h3 class="task-title"><%= task.title %></h3>
+                    <p class="task-description"><%= task.desc %></p>
+                    <div class="task-actions">
+                        <% if task.iscompleted %>
+                            <%= button_to "Marquer comme non terminée", { controller: "home", action: "changeState", id: task.id }, method: :changeState, disabled: true %>
+                        <% else %>
+                            <%= button_to "Marquer comme terminée", { controller: "home", action: "changeState", id: task.id }, method: :changeState %>
+                        <% end %>
                 <% end %>
-            </div>
-        </li>
+            <% end %>
+            <%= form_tag({ controller: "home", action: "delete", id: task.id },class: "deleteForm", method: :delete) do %>
+                <%= button_tag type: "submit", class: "delete", onclick: "delete(); return false;" do %>
+                    <%= image_tag("trashCan.png", alt: "Poubelle",class: "deleteImage") %>
+                <% end %>
+            <% end %>
+        </div>
+    </li>
 <% end %>
 </div>

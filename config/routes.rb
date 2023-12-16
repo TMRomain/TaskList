@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   post 'home/changeState/:id', to: 'home#changeState', as: 'changeState_task'
   post 'home/updateSelection/:selection', to: 'home#updateSelection', as: 'update_selection'
   
-  patch 'home/redirectToUpdate/:id', to: 'home#redirectToUpdate', as: 'update_task'
+  post 'home/redirectToUpdate/:id', to: 'home#redirectToUpdate', as: 'update_task'
+
   patch 'home/nextMonth', to: 'home#nextMonth'
   patch 'home/previousMonth', to: 'home#previousMonth', as: 'previousMonth'
   
