@@ -1,9 +1,6 @@
 <p>
-    <a href="/home/addTask">
-        Ajouter une tâche
-    </a>
+    
 <p>
-    Trier par :
     <div class="monthSelection">
     <%= button_to "Mois", update_selection_path(selection: "monthly"), class: (@current_selection == "monthly" ? "selectButtonOn" : "selectButtonOff"), method: :post %>
         <%= button_to "Terminer", update_selection_path(selection: "finished"),class: (@current_selection == "finished" ? "selectButtonOn" : "selectButtonOff"), method: :post %>
@@ -17,9 +14,9 @@
                     <%= image_tag("arrowLeft.png", alt: "Flèche gauche") %>
                 <% end %>
             <% end %>
-            
-            <%= I18n.t('month_names')[@current_selected_month] %>
-            
+            <p class="monthName">
+                <%= I18n.t('month_names')[@current_selected_month] %>
+            </p>
             <%= form_tag({ controller: "home", action: "nextMonth" }, method: :patch) do %>
                 <%= button_tag type: "submit", class: "arrowRight", onclick: "nextMonth(); return false;" do %>
                     <%= image_tag("arrowRight.png", alt: "Flèche droite") %>
@@ -29,8 +26,11 @@
     <% end %>
 
 <div class="tasks">
+<a href="/home/addTask" class="addTask">
+  <img src="../assets/plus.png" alt="Ajouter une tâche">
+</a>
 <% @tasks.each do |task| %>
-    <li>
+    <li class="<%= !task.iscompleted ? 'activeCard' : 'innactiveCard' %>">
         <div class="cardContent">
             <%= form_tag(update_task_path(id: task.id), method: :post) do %>
                 <%= button_tag type: "submit", class: "updateButton", onclick: "redirectToUpdate(); return false;" do %>
