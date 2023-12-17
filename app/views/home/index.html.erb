@@ -35,6 +35,9 @@
             <%= form_tag(update_task_path(id: task.id), method: :post) do %>
                 <%= button_tag type: "submit", class: "updateButton", onclick: "redirectToUpdate(); return false;" do %>
                     <p class="task-date"><%= task.date.strftime("%d") %></p>
+                    <%  if @current_selection  != "monthly" %>
+                        <h3 class="task-month"><%= I18n.t('month_names')[task.date.month] %></h3>
+                    <% end %>
                     <h3 class="task-title"><%= task.title %></h3>
                     <p class="task-description"><%= task.desc %></p>
                 <% end %>
