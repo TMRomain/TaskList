@@ -1,5 +1,5 @@
 <h1>Modifier une tâche</h1>
-<form action="/home" method="post">
+<form action="/home" method="post"  class="addTaskForm">
     <input hidden id="id" name="id" value="<%= @task.id %>" locked>
     <br>
     <label for="title">
@@ -21,8 +21,9 @@
     <input  type="date" id="date" name="date" value="<%= @task.date %>" required>
     <input hidden type="checkbox" id="iscompleted" name="iscompleted" value="iscompleted">
     <br>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Valider">
+    <a href="/" class="backToHome">
+        Retour à l'accueil
+    </a>
 </form>
-<a href="/">
-    Retour à l'accueil
-</a>
+
