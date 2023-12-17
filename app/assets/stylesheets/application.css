@@ -124,6 +124,15 @@ body{
     font-size: 1.5em;
     color: #3a454f;
 }
+.task-month {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+  margin-bottom: 5%;
+  font-size: 1.6em;
+  color: #3a454f;
+}
 .task-action{
     flex-direction: column;
     align-self: center;
