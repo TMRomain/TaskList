@@ -6,6 +6,7 @@ class HomeController < ApplicationController
 
   def index
     @current_selected_month = @@monthIndex
+    @current_selection = @@currentSelection
     if  @@currentSelection == "monthly"
       @tasks = Task.select { |task| task.date.month == @current_selected_month }
       
