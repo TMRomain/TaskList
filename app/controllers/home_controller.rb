@@ -68,12 +68,7 @@ class HomeController < ApplicationController
   end
 
   def updateTask
-    task = Task.get_task_by_id(params[:id])
-    task.title = params[:title]
-    task.desc = params[:description]
-    task.date = params[:date]
-    task.iscompleted = params[:iscompleted]
-    task.save
+    task = Task.update_task(params[:id],params[:title],params[:description],params[:date],params[:iscompleted])
     redirect_to '/'
   end
 
