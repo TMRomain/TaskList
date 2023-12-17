@@ -8,16 +8,15 @@ class HomeController < ApplicationController
     @current_selected_month = @@monthIndex
     @current_selection = @@currentSelection
     if  @@currentSelection == "monthly"
-      @tasks = Task.select { |task| task.date.month == @current_selected_month }
-      
+      @tasks = Task.get_monthly_tasks(@current_selected_month)
     elsif  @@currentSelection == "finished"
-      @tasks = Task.select { |task| task.iscompleted }
+      @tasks = Task.get_finished_tasks
     elsif  @@currentSelection == "toCome"
-      @tasks = Task.select { |task| task.date >= Date.today.beginning_of_month }
+      @tasks = Task.get_to_come_tasks
     elsif  @@currentSelection == "all"
-      @tasks = Task.all
+      @tasks = Task.get_all_tasks
     else
-      @tasks = Task.all
+      @tasks = Task.get_all_tasks
     end
     # logger.debug(@currentSelection)
   end
@@ -59,7 +58,7 @@ class HomeController < ApplicationController
     task_description = params[:description]
     task_date = params[:date]
     task_iscompleted = false
-    @task  = Task.new(title: task_title, desc: task_description, date: task_date)
+    @task  = Task.create_task(task_title,task_description,task_date,task_iscompleted)
 
     # Save the new task to the database
     @task.save
@@ -69,7 +68,7 @@ class HomeController < ApplicationController
   end
 
   def updateTask
-    task = Task.find(params[:id])
+    task = Task.get_task_by_id(params[:id])
     task.title = params[:title]
     task.desc = params[:description]
     task.date = params[:date]
@@ -79,13 +78,13 @@ class HomeController < ApplicationController
   end
 
   def delete
-    task = Task.find(params[:id])
+    task = Task.get_task_by_id(params[:id])
     task.destroy
     redirect_to '/'
   end
 
   def changeState
-    @task = Task.find(params[:id])
+    @task = Task.get_task_by_id(params[:id])
     @task.iscompleted = !@task.iscompleted
     @task.save
     # update the page 
@@ -93,16 +92,15 @@ class HomeController < ApplicationController
   end
 
   def redirectToUpdate
-    @task = Task.find(params[:id])
+    @task = Task.get_task_by_id(params[:id])
     # load view updateTask.html.erb
     render template: "home/updateTask"
   end
 
   def update
-    @task = Task.find(params[:id])
+    @task = Task.get_task_by_id(params[:id])
     @task.completed = params[:completed]
     if @task.save
-      flash[:success] = "Task updated successfully"
       redirect_to tasks_path
     else
       render :edit
