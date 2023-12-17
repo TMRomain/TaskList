@@ -11,7 +11,7 @@ class Task < ApplicationRecord
         where("iscompleted = ?", true).order(date: :asc)
     end
     def self.get_to_come_tasks
-        where("date >= ?", Date.today.beginning_of_month).order(date: :asc)
+        where("date >= ? AND iscompleted = ?", Date.today.beginning_of_month,false).order(date: :asc)
     end
     def self.get_all_tasks
         all.order(date: :asc)
