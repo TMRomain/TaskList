@@ -1,6 +1,4 @@
 <p>
-    
-<p>
     <div class="monthSelection">
     <%= button_to "Mois", update_selection_path(selection: "monthly"), class: (@current_selection == "monthly" ? "selectButtonOn" : "selectButtonOff"), method: :post %>
         <%= button_to "Terminer", update_selection_path(selection: "finished"),class: (@current_selection == "finished" ? "selectButtonOn" : "selectButtonOff"), method: :post %>
@@ -24,37 +22,37 @@
             <% end %>
         </div>
     <% end %>
-
+</p>
 <div class="tasks">
-<a href="/home/addTask" class="addTask">
-  <img src="../assets/plus.png" alt="Ajouter une tâche">
-</a>
-<% @tasks.each do |task| %>
-    <li class="<%= !task.iscompleted ? 'activeCard' : 'innactiveCard' %>">
-        <div class="cardContent">
-            <%= form_tag(update_task_path(id: task.id), method: :post) do %>
-                <%= button_tag type: "submit", class: "updateButton", onclick: "redirectToUpdate(); return false;" do %>
-                    <p class="task-date"><%= task.date.strftime("%d") %></p>
-                    <%  if @current_selection  != "monthly" %>
-                        <h3 class="task-month"><%= I18n.t('month_names')[task.date.month] %></h3>
-                    <% end %>
-                    <h3 class="task-title"><%= task.title %></h3>
-                    <p class="task-description"><%= task.desc %></p>
-                <% end %>
-            <% end %>
-            <% if !task.iscompleted %>
-                <%= form_tag({ controller: "home", action: "changeState" ,id: task.id  }, method: :post) do %>
-                    <%= button_tag type: "submit", class: "checkmark", onclick: "changeState(); return false;" do %>
-                        <%= image_tag("checkmark.png", alt: "Flèche gauche",class: "checkmarkImage") %>
+    <a href="/home/addTask" class="addTask">
+    <img src="../assets/plus.png" alt="Ajouter une tâche">
+    </a>
+    <% @tasks.each do |task| %>
+        <li class="<%= !task.iscompleted ? 'activeCard' : 'innactiveCard' %>">
+            <div class="cardContent">
+                <%= form_tag(update_task_path(id: task.id), method: :post) do %>
+                    <%= button_tag type: "submit", class: "updateButton", onclick: "redirectToUpdate(); return false;" do %>
+                        <p class="task-date"><%= task.date.strftime("%d") %></p>
+                        <%  if @current_selection  != "monthly" %>
+                            <h3 class="task-month"><%= I18n.t('month_names')[task.date.month] %></h3>
+                        <% end %>
+                        <h3 class="task-title"><%= task.title %></h3>
+                        <p class="task-description"><%= task.desc %></p>
                     <% end %>
                 <% end %>
-            <% end %>
-            <%= form_tag({ controller: "home", action: "delete", id: task.id },class: "deleteForm", method: :delete) do %>
-                <%= button_tag type: "submit", class: "delete", onclick: "delete(); return false;" do %>
-                    <%= image_tag("trashCan.png", alt: "Poubelle",class: "deleteImage") %>
+                <% if !task.iscompleted %>
+                    <%= form_tag({ controller: "home", action: "changeState" ,id: task.id  }, method: :post) do %>
+                        <%= button_tag type: "submit", class: "checkmark", onclick: "changeState(); return false;" do %>
+                            <%= image_tag("checkmark.png", alt: "Flèche gauche",class: "checkmarkImage") %>
+                        <% end %>
+                    <% end %>
                 <% end %>
-            <% end %>
-        </div>
-    </li>
-<% end %>
+                <%= form_tag({ controller: "home", action: "delete", id: task.id },class: "deleteForm", method: :delete) do %>
+                    <%= button_tag type: "submit", class: "delete", onclick: "delete(); return false;" do %>
+                        <%= image_tag("trashCan.png", alt: "Poubelle",class: "deleteImage") %>
+                    <% end %>
+                <% end %>
+            </div>
+        </li>
+    <% end %>
 </div>
