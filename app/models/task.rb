@@ -25,7 +25,7 @@ class Task < ApplicationRecord
         task.title = title
         task.desc = description
         task.date = date
-        task.iscompleted = iscompleted
+        task.iscompleted = false
         task.save
     end
     def self.delete_task(id)
