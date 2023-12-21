@@ -7,6 +7,8 @@ class HomeController < ApplicationController
   def index
     @current_selected_month = @@monthIndex
     @current_selection = @@currentSelection
+
+    # Récupération des tâches en fonction de la sélection actuelle
     if  @@currentSelection == "monthly"
       @tasks = Task.get_monthly_tasks(@current_selected_month)
     elsif  @@currentSelection == "finished"
@@ -18,17 +20,21 @@ class HomeController < ApplicationController
     else
       @tasks = Task.get_all_tasks
     end
+    # Exemple d'utilisation du logger pour déboguer
     # logger.debug(@currentSelection)
   end
-  def addTask
 
+  # Méthode pour afficher le formulaire d'ajout de tâche
+  def addTask
   end
 
+  # Méthode pour mettre à jour la sélection
   def updateSelection
     @@currentSelection = params[:selection]
     redirect_to '/'
   end
 
+  # Méthodes pour naviguer au mois suivant et précédent
   def nextMonth
     @@monthIndex = @@monthIndex + 1
     if @@monthIndex > 12
@@ -45,10 +51,11 @@ class HomeController < ApplicationController
     redirect_to '/'
   end
 
+  # Méthode pour créer une tâche
   def create
-    #check if params[:id is not null]
-    #if not null, update the task
-    #else create a new task
+    # Vérifie si params[:id] n'est pas nul
+    # Si ce n'est pas nul, met à jour la tâche
+    # Sinon, crée une nouvelle tâche
     if params[:id] != ""
       updateTask
       return
@@ -60,38 +67,43 @@ class HomeController < ApplicationController
     task_iscompleted = false
     @task  = Task.create_task(task_title,task_description,task_date,task_iscompleted)
 
-    # Save the new task to the database
+    # Enregistre la nouvelle tâche dans la base de données
     @task.save
 
-    # Redirect to the index page after successful creation
+    # Redirige vers la page d'accueil après la création réussie
     redirect_to '/'
   end
 
+  # Méthode pour mettre à jour une tâche
   def updateTask
     task = Task.update_task(params[:id],params[:title],params[:description],params[:date],params[:iscompleted])
     redirect_to '/'
   end
 
+  # Méthode pour supprimer une tâche
   def delete
     task = Task.get_task_by_id(params[:id])
     task.destroy
     redirect_to '/'
   end
 
+  # Méthode pour changer l'état d'une tâche (complétée ou non complétée)
   def changeState
     @task = Task.get_task_by_id(params[:id])
     @task.iscompleted = !@task.iscompleted
     @task.save
-    # update the page 
+    # Met à jour la page 
     redirect_to '/'
   end
 
+  # Méthode pour rediriger vers la vue de mise à jour de tâche
   def redirectToUpdate
     @task = Task.get_task_by_id(params[:id])
-    # load view updateTask.html.erb
+    # Charge la vue updateTask.html.erb
     render template: "home/updateTask"
   end
 
+  # Méthode pour mettre à jour une tâche
   def update
     @task = Task.get_task_by_id(params[:id])
     @task.completed = params[:completed]
