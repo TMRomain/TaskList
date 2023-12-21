@@ -62,7 +62,7 @@ body{
     justify-content: space-around;
     flex-direction: column;
 }
-.innactiveCard{
+.inactiveCard{
     position: relative;
     height: auto;
     min-height: 125px;

@@ -1,20 +1,28 @@
+<!-- Boutons de sélection de mois -->
 <p>
     <div class="monthSelection">
-    <%= button_to "Mois", update_selection_path(selection: "monthly"), class: (@current_selection == "monthly" ? "selectButtonOn" : "selectButtonOff"), method: :post %>
-        <%= button_to "Terminer", update_selection_path(selection: "finished"),class: (@current_selection == "finished" ? "selectButtonOn" : "selectButtonOff"), method: :post %>
-        <%= button_to "A venir", update_selection_path(selection: "toCome"),class: (@current_selection == "toCome" ? "selectButtonOn" : "selectButtonOff"), method: :post %>
-        <%= button_to "Toute", update_selection_path(selection: "all"),class: (@current_selection == "all" ? "selectButtonOn" : "selectButtonOff"), method: :post %>
+        <%= button_to "Mois", update_selection_path(selection: "monthly"), class: (@current_selection == "monthly" ? "selectButtonOn" : "selectButtonOff"), method: :post %>
+        <%= button_to "Terminer", update_selection_path(selection: "finished"), class: (@current_selection == "finished" ? "selectButtonOn" : "selectButtonOff"), method: :post %>
+        <%= button_to "À venir", update_selection_path(selection: "toCome"), class: (@current_selection == "toCome" ? "selectButtonOn" : "selectButtonOff"), method: :post %>
+        <%= button_to "Toutes", update_selection_path(selection: "all"), class: (@current_selection == "all" ? "selectButtonOn" : "selectButtonOff"), method: :post %>
     </div>
-    <%  if @current_selection  == "monthly" %>
+
+    <!-- Contenu spécifique à la sélection mensuelle -->
+    <% if @current_selection == "monthly" %>
         <div class="monthSelection">
+            <!-- Bouton mois précédent -->
             <%= form_tag({ controller: "home", action: "previousMonth" }, method: :patch) do %>
                 <%= button_tag type: "submit", class: "arrowLeft", onclick: "previousMonth(); return false;" do %>
                     <%= image_tag("arrowLeft.png", alt: "Flèche gauche") %>
                 <% end %>
             <% end %>
+
+            <!-- Affichage du nom du mois actuel -->
             <p class="monthName">
                 <%= I18n.t('month_names')[@current_selected_month] %>
             </p>
+
+            <!-- Bouton mois suivant -->
             <%= form_tag({ controller: "home", action: "nextMonth" }, method: :patch) do %>
                 <%= button_tag type: "submit", class: "arrowRight", onclick: "nextMonth(); return false;" do %>
                     <%= image_tag("arrowRight.png", alt: "Flèche droite") %>
@@ -23,33 +31,45 @@
         </div>
     <% end %>
 </p>
+
+<!-- Liste des tâches -->
 <div class="tasks">
+    <!-- Bouton d'ajout de tâche -->
     <a href="/home/addTask" class="addTask">
-    <img src="../assets/plus.png" alt="Ajouter une tâche">
+        <img src="../assets/plus.png" alt="Ajouter une tâche">
     </a>
+
+    <!-- Affichage des tâches -->
     <% @tasks.each do |task| %>
-        <li class="<%= !task.iscompleted ? 'activeCard' : 'innactiveCard' %>">
+        <li class="<%= !task.iscompleted ? 'activeCard' : 'inactiveCard' %>">
             <div class="cardContent">
+                <!-- Formulaire de mise à jour de la tâche -->
                 <%= form_tag(update_task_path(id: task.id), method: :post) do %>
-                    <%= button_tag type: "submit", class: "updateButton", onclick: "redirectToUpdate(); return false;" do %>
+                      <!-- Desactiver modification si tache completer -->
+                    <%= button_tag type: "submit", class: "updateButton", onclick: "redirectToUpdate(); return false;", disabled: task.iscompleted ? true : false do %>
+                        <!-- Détails de la tâche -->
                         <p class="task-date"><%= task.date.strftime("%d") %></p>
-                        <%  if @current_selection  != "monthly" %>
+                        <% if @current_selection != "monthly" %>
                             <h3 class="task-month"><%= I18n.t('month_names')[task.date.month] %></h3>
                         <% end %>
                         <h3 class="task-title"><%= task.title %></h3>
                         <p class="task-description"><%= task.desc %></p>
                     <% end %>
                 <% end %>
+
+                <!-- Changer l'état de la tâche à complétée -->
                 <% if !task.iscompleted %>
-                    <%= form_tag({ controller: "home", action: "changeState" ,id: task.id  }, method: :post) do %>
+                    <%= form_tag({ controller: "home", action: "changeState" ,id: task.id }, method: :post) do %>
                         <%= button_tag type: "submit", class: "checkmark", onclick: "changeState(); return false;" do %>
-                            <%= image_tag("checkmark.png", alt: "Flèche gauche",class: "checkmarkImage") %>
+                            <%= image_tag("checkmark.png", alt: "Flèche gauche", class: "checkmarkImage") %>
                         <% end %>
                     <% end %>
                 <% end %>
-                <%= form_tag({ controller: "home", action: "delete", id: task.id },class: "deleteForm", method: :delete) do %>
+
+                <!-- Formulaire de suppression de la tâche -->
+                <%= form_tag({ controller: "home", action: "delete", id: task.id }, class: "deleteForm", method: :delete) do %>
                     <%= button_tag type: "submit", class: "delete", onclick: "delete(); return false;" do %>
-                        <%= image_tag("trashCan.png", alt: "Poubelle",class: "deleteImage") %>
+                        <%= image_tag("trashCan.png", alt: "Poubelle", class: "deleteImage") %>
                     <% end %>
                 <% end %>
             </div>
